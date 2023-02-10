@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHARE tài khoản CHAT GPT</title>
+    <title>MUA tài khoản CHAT GPT</title>
     <link rel="stylesheet" href="css.css">
     <style>
 
@@ -33,7 +33,7 @@
             color: #009966;
         }
 
-        img {
+        .container > img {
             animation: rotate 10s linear infinite;
             width: 100px;
             padding-right: 10px;
@@ -43,7 +43,7 @@
           width: 50%;
           margin: 0 auto;
           text-align: center;
-          padding-top: 60px;
+          /* padding-top: 60px; */
         }
 
         .account-info {
@@ -73,7 +73,7 @@
         margin-bottom: 20px;
         }
 
-        #copyBtntk,#copyBtnmk, #refreshBtn {
+        #thuong-1,#thuong-2, #refreshBtn {
             color: rgb(0, 7, 3);
             padding: 10px 15px;
             border: 0px;
@@ -90,14 +90,14 @@
 
         }
 
-        #copyBtntk:hover,#copyBtnmk:hover, #refreshBtn:hover {
+        #thuong-1:hover,#thuong-2:hover{
             transform: translateY(2px);
             box-shadow: 2px 4px 4px rgba(0,0,0,0.2);
         }
         #refreshBtn{
           background-color: #009966;
           color: #fff;
-          width: 350px;
+          width: 378px;
         }
 
 
@@ -105,18 +105,15 @@
     @media (max-width: 767px) {
       .account-info p a{
           /* margin-top: 10px; */
-          padding: 10px;
-          background-color: #ededed;
           font-size: 10px;
-          border-radius: 10%;
           }
       .container {
           width: 90%;
         }
-      #copyBtntk,#copyBtnmk, #refreshBtn{
+      #thuong-1,#thuong-2, #refreshBtn{
           
-          width: 120px;
-          height: 68px;
+          width: 227px;
+          height: 154px;
         }
       button p {
           font-size: 14px;
@@ -139,8 +136,29 @@
 
 
       }
-
-  
+      .container div img{
+        width: 100px;
+        padding-right: 10px;
+      }
+ 
+      #thuong-1,#thuong-2, a{
+        text-decoration: none;
+        color: #000;
+      }
+      #thuong-2 > a > p:nth-child(3) , p:nth-child(4){
+        text-decoration: none;
+        color: rgb(17, 184, 31);
+      }
+      #thuong-1,#thuong-2 , a i{
+        font-size: 10px;
+      }
+      #refreshBtn div p , #refreshBtn div p p{
+        text-align: left;
+        margin: 0;
+      }
+      #thuong-1 > a{
+        margin: 30px !important;
+      }
   </style>
 </head>
 
@@ -154,18 +172,32 @@
     font-size: 10px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
     CHAT GPT</strong></p>
-    <p ><strong>SHARE TÀI KHOẢN MIỄN PHÍ</strong></p>
-    <div class="account-info">
+    <p ><strong>MUA TÀI KHOẢN</strong></p>
+    <p ><strong style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Chỉnh mình dùng được</strong></p>
+    <!-- <div class="account-info"> -->
       
-      <h2 id="email"></h2>
+      <!-- <h2 id="email"></h2> -->
       <!-- <p id="passwordValue">Katelyn010*</p> -->
       <p id="password"><span id="passwordValue"></span></p>
       <!-- <p><a href="https://t.me/taochatgpt" target="_blank">TẠO TÀI KHOẢN CHÍNH CHỦ BẰNG GMAIL CÁ NHÂN</a></p> -->
-      <p><a href="mua.html" target="_blank">MUA CHO NHANH</a></p>
-      <button id="copyBtntk"><p>Copy TK</p></button>
-      <button id="copyBtnmk"><p>Copy MK</p></button>
+      <button id="refreshBtn">
+        <p>TÀI KHOẢN THƯỜNG
+        <div style="font-size: 10px;">
+      </p > <i>sài ok nhưng hay quá tái </i><p>
+      </div>
+      <p>TÀI KHOẢN VIP</p>
+      <div style="font-size: 10px;">
+    </p > <i>sài mượt không lỗi vặt bảo mật cá nhân</i><p>
     </div>
-    <button id="refreshBtn"><p>Làm Mới</p></button>
+      </p></button>
+      <div class="sub_thuong1">
+        <button id="thuong-1" ><a href="https://www.tiktok.com/@chatgpt001?_t=8ZcCtkWpxRZ&_r=1"><img src="./loi.png" alt=""><p>Thường</p><i>( kênh tiktok: ChatGPT001)</i><p>Nhận Miễn phí</p></a></button>
+        <button id="thuong-2"><a href="https://zalo.me/g/uktqiz531"><img src="./loi.png" alt=""><p>Vip</p><i>( Có bảo hành )</i><p>25.000</p></a></button>
+      </div>
+
+
+      <p><a href="https://t.me/taochatgpt" target="_blank" style="font-size: 13px; color: #0f6104; padding-bottom: 50px; padding-top: 10px;">Hỗ trợ tạo tài khoản CHATGPT nhanh chóng</a></p>
+  </div>
   </div>
 
 <script>
@@ -1310,14 +1342,14 @@ document.getElementById("email").innerHTML = account.email;
 document.getElementById("passwordValue").innerHTML = '*'.repeat(account.password.length);
 
 // Sự kiện cho nút sao chép
-document.getElementById("copyBtntk").addEventListener("click", function() {
+document.getElementById("thuong-1").addEventListener("click", function() {
 navigator.clipboard.writeText(account.email);
 alert("Đã sao chép Tài khoản "+"\n"+ account.email);
 });
 
 
 // Sự kiện cho nút sao chép mật khẩu
-document.getElementById("copyBtnmk").addEventListener("click", function() {
+document.getElementById("thuong-2").addEventListener("click", function() {
 document.getElementById("passwordValue").innerHTML = account.password;
 navigator.clipboard.writeText(account.password);
 alert("Đã sao chép Mật khẩu " +"\n"+ account.password );
